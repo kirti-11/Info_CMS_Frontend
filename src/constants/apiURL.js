@@ -1,4 +1,4 @@
-import API_CONFIG from "../Api/ApiConfig";
+import API_CONFIG from "../Api/apiConfig";
 
 export const LOGIN_URL = "/auth/login";
 export const REGISTER_URL = "/auth/register";

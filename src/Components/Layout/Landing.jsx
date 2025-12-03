@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Button from "../common/Button";
-import Register from "../auth/Register";
-import Login from "../auth/Login";
+import Register from "../Auth/Register";
+import Login from "../Auth/Login";
 import Modal from "./Model";
 import { useAuth } from "../../Context/AuthContext";
 import { Link, NavLink, useNavigate } from "react-router-dom";
@@ -101,11 +101,10 @@ function Landing() {
       {/* Navbar Section */}
       <div className="bg-gradient-to-b from-[var(--color-important)] to-white">
         <div
-          className={`${
-            theme === "theme-dark"
-              ? "bg-[url(grid-dark.svg)]"
-              : "bg-[url(grid-light.svg)]"
-          } bg-[length:300px] bg-repeat`}
+          className={`${theme === "theme-dark"
+            ? "bg-[url(grid-dark.svg)]"
+            : "bg-[url(grid-light.svg)]"
+            } bg-[length:300px] bg-repeat`}
         >
           <div className=" py-2">
             <div className="container mx-auto flex items-center justify-between px-4 lg:px-8">
@@ -205,11 +204,10 @@ function Landing() {
                 ) : (
                   <Button
                     bgColor="bg-important"
-                    className={`${
-                      theme === "theme-dark"
-                        ? "hover:shadow-[0px_0px_10px_10px_rgba(8,_112,_184,_0.7)]"
-                        : ""
-                    } text-primary py-2 px-6 rounded-lg text-sm font-medium md:text-lg transition-all`}
+                    className={`${theme === "theme-dark"
+                      ? "hover:shadow-[0px_0px_10px_10px_rgba(8,_112,_184,_0.7)]"
+                      : ""
+                      } text-primary py-2 px-6 rounded-lg text-sm font-medium md:text-lg transition-all`}
                     onClick={() => {
                       if (!isLoggedIn) setShowLogin(true);
                     }}
@@ -247,11 +245,10 @@ function Landing() {
               <div className="my-6 ">
                 <Button
                   bgColor="bg-important"
-                  className={`${
-                    theme === "theme-dark"
-                      ? "shadow-[0px_0px_10px_10px_rgba(8,_112,_184,_0.7)]"
-                      : ""
-                  } text-primary py-3 px-6 rounded-lg text-lg font-medium transition-all hover:scale-105`}
+                  className={`${theme === "theme-dark"
+                    ? "shadow-[0px_0px_10px_10px_rgba(8,_112,_184,_0.7)]"
+                    : ""
+                    } text-primary py-3 px-6 rounded-lg text-lg font-medium transition-all hover:scale-105`}
                   onClick={handleStarted}
                 >
                   Get Started

@@ -1,5 +1,5 @@
 import axios from "axios";
-import API_CONFIG from "./ApiConfig";
+import API_CONFIG from "./apiConfig";
 
 // Creating an Axios instance with base settings for all API requests
 const axiosInstance = axios.create({
@@ -37,14 +37,14 @@ axiosInstance.interceptors.request.use(
 
 axiosInstance.interceptors.response.use(
   (response) => {
-  
+
     return response;
   },
   (error) => {
     if (error.response && error.response.status === 401) {
       // If we receive a 401 Unauthorized response, the token might have expired
       localStorage.removeItem("token");
-      window.location.href = '/'; 
+      window.location.href = '/';
     }
     return Promise.reject(error);
   }
